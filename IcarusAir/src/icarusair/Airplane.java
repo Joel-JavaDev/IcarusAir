@@ -1,3 +1,4 @@
+package icarusair;
 /**
  *  Abstrakt klass för alla flygplan. 
  * 
@@ -10,7 +11,7 @@ public abstract class Airplane {
 	int numberOfSeats;
 	int passengers;
 	double operationCost;
-	double fuelCost;
+	static double fuelCost;
 	String typeOfPlane;
 	String flightName;
 	

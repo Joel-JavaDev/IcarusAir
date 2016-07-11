@@ -1,10 +1,11 @@
+package icarusair;
 
 public class MealReservation {
 
 	private boolean eatFood;
 	private double price;
 	public enum foodType {
-	    Kött, Fisk, Vegetariskt; 
+	    Kï¿½tt, Fisk, Vegetariskt; 
 	}
 	public enum menu {
 	    FirstClass,EconomyClass; 

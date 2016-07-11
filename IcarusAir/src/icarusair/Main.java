@@ -1,3 +1,4 @@
+package icarusair;
 
 import menu.MenuBookingFlight;
 import menu.MenuStatistics;
@@ -35,7 +36,7 @@ public class Main {
 				break;
 			
 			case 2: 
-				MenuStatistics.showStatisticMenu();
+				MenuStatistics.manageStatisticMenu();
 				System.out.println();
 				break;
 			

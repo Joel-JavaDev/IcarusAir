@@ -1,3 +1,4 @@
+package icarusair;
 /**
  * Klass för litet flygplan. 
  * 
@@ -9,7 +10,7 @@ public class SmallAirPlane extends Airplane {
 	
 	final int numbFirstClassSeats = 4;
 	final int numbEconomyClassSeats = 6;
-	double operatingCost = 200000;
+	static double operatingCost = 200000;
 	double fuelUsage = 15000;
 	final String Flightnumber = "IA-S101";
 	
@@ -21,11 +22,11 @@ public class SmallAirPlane extends Airplane {
 		return numbEconomyClassSeats;
 	}
 	
-	public double getOperatingCost() {
+	public static double getOperatingCost() {
 		return operatingCost;
 	}
 	
-	public double getFuelUsage() {
+	public static double getFuelUsage() {
 		return fuelCost;
 	}
 	
@@ -43,24 +44,27 @@ public class SmallAirPlane extends Airplane {
 		return numberOfSeats;
 	}
 	
+	
 	/**
 	 * Beräknar totalbränslekostnad = flygplanets egna bränsleförbrukning + kostnad för varje enskild passagerare + kostnad för varje kilo bagage
 	 * 
 	 * @return	totalFuelCost	den totala bränslekostnaden
 	 */
-	public double calculateTotalFuelCost(){
+	public static double calculateTotalFuelCost(){
 		int numbPassengers = 10;
 		int luggageWeight = 20;
 		double totalFuelCost = ((getFuelUsage() *10) + (100*numbPassengers + 25*luggageWeight*numbPassengers));
 		return totalFuelCost;
 	}
 	
+	
+	
 	/**
 	 * Beräknar totalkostnad = flygplanets operationskostnad + totalbränslekostnad
 	 * 
 	 * @return	totalOperatingCost	
 	 */
-	public double totalOperatingCost(){
+	public static double totalOperatingCost(){
 		double totalOperatingCost = getOperatingCost() + calculateTotalFuelCost(); 
 		return totalOperatingCost;
 	}

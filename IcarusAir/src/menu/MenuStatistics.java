@@ -1,5 +1,8 @@
 package menu;
 
+import icarusair.SmallAirPlane;
+
+
 
 /**
  * Meny för boknings- och kostnadsstatistik, med switschsats. Extern metod anropas per användarens inmatning
@@ -29,7 +32,6 @@ public class MenuStatistics {
 		
 		do {
 			userChoice =  InputMenuChoice.getUserChoise(NUMBER_OF_MENUCHOICES); 
-			//TODO Stefan. Snygga till utskrifter
 			System.out.println();
 			switch (userChoice){
 
@@ -46,7 +48,7 @@ public class MenuStatistics {
 				break;
 				
 			case 3: // Visa utgifter för flygplan
-				System.out.println("Du tryckte på 3 - Visa utgifter för flygplan");
+				System.out.println("Kostnaden för att flyga detta plan fullbokat är: " + SmallAirPlane.totalOperatingCost());
 				break;
 				
 			case 4: // Visa inkomster för flygplan
