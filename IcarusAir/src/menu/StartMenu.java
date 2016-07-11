@@ -22,7 +22,7 @@ public class StartMenu {
 		 */
 	    public static int mainMenu() {
 	    	System.out.println("************************************************************");
-	        System.out.println("*                 Välkommen till IcarusAir                 *");
+	        System.out.println("*                 Välkommen till IcarusAir                 **");
 	        System.out.println("*                     Bokningsssystem                      *");
 	        System.out.println("*                                                          *");
 	        System.out.println("*   1. Boka Biljett                                        *");
