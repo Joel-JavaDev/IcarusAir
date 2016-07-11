@@ -26,7 +26,7 @@ public class StartMenu {
 	        System.out.println("*                     Bokningsssystem                      *");
 	        System.out.println("*                                                          *");
 	        System.out.println("*   1. Boka Biljett                                        *");
-	        System.out.println("*   2. Kostnadsstatistik                                   *");
+	        System.out.println("*   2. Statistik - Bokning & Kostnader                     *");
 	        System.out.println("*                                                          *");
 	        System.out.println("*   0. Avsluta Program                                     *");
 	        System.out.println("************************************************************");
