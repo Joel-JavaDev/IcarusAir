@@ -13,7 +13,7 @@ package menu;
 public class MenuStatistics {
 	public final static int NUMBER_OF_MENUCHOICES = 5;	// antal menyval exkl 0
 	public static int userChoice;						// användarens menyval
-	static boolean exitApp = false;						// möjliggör avslut av proram
+	static boolean exitApp = false;						// möjliggör avslut av program
 
 	
 	/**
@@ -21,20 +21,11 @@ public class MenuStatistics {
 	 * ta emot inmatning från användaren. Endast om användaren matar in värdet 0 som loopen 
 	 * avslutas genom att sätta exitApp = true. Programmet återvänder till startmeny.
 	 */
-	public static void showStatisticMenu() {
+	public static void manageStatisticMenu() {
+		
+		showStatisticMenu();
 		exitApp = false;
 		
-		System.out.println("************************************************************");
-		System.out.println("*             Boknings- och kostnadsstatistik              *");
-		System.out.println("*                                                          *");
-		System.out.println("*   1. Visa passagerarlista                                *");
-		System.out.println("*   2. Visa upptagna/lediga säten på flygplan              *");
-		System.out.println("*   3. Visa utgifter för flygplan                          *");
-		System.out.println("*   4. Visa inkomster för flygplan                         *");
-		System.out.println("*   5. Visa omsättning för flygplan                        *");
-		System.out.println("*                                                          *");
-		System.out.println("*   0. Åter Huvudmeny                                      *");
-		System.out.println("************************************************************");
 		
 		do {
 			userChoice =  InputMenuChoice.getUserChoise(NUMBER_OF_MENUCHOICES); 
@@ -46,24 +37,24 @@ public class MenuStatistics {
 				exitApp = true;
 				break;
 			
-			case 1: //Average Wage
-				System.out.println("Du tryckte på 1");
+			case 1: // Visa passagerarlista
+				System.out.println("Du tryckte på 1 - Visa passagerarlista");
 			    break;
 							
-			case 2: // Highest wage
-				System.out.println("Du tryckte på 2");
+			case 2: // Visa upptagna/lediga säten på flygplan
+				System.out.println("Du tryckte på 2 - Visa upptagna/lediga säten på flygplan");
 				break;
 				
-			case 3: //Lowest wage
-				System.out.println("Du tryckte på 3");
+			case 3: // Visa utgifter för flygplan
+				System.out.println("Du tryckte på 3 - Visa utgifter för flygplan");
 				break;
 				
-			case 4: // Total bonus
-				System.out.println("Du tryckte på 4");
+			case 4: // Visa inkomster för flygplan
+				System.out.println("Du tryckte på 4 - Visa inkomster för flygplan");
 				break;
 				
-			case 5: // % women
-				System.out.println("Du tryckte på 5");
+			case 5: // Visa omsättning för flygplan 
+				System.out.println("Du tryckte på 5 - Visa omsättning för flygplan");
 				break;
 
 				
@@ -75,4 +66,22 @@ public class MenuStatistics {
 		} while (!exitApp);
     
 	}
+	
+	/**
+	 * Ritar ut Statistikmenyn
+	 */
+    public static void showStatisticMenu() {
+		System.out.println("************************************************************");
+		System.out.println("*             Boknings- och kostnadsstatistik              *");
+		System.out.println("*                                                          *");
+		System.out.println("*   1. Visa passagerarlista                                *");
+		System.out.println("*   2. Visa upptagna/lediga säten på flygplan              *");
+		System.out.println("*   3. Visa utgifter för flygplan                          *");
+		System.out.println("*   4. Visa inkomster för flygplan                         *");
+		System.out.println("*   5. Visa omsättning för flygplan                        *");
+		System.out.println("*                                                          *");
+		System.out.println("*   0. Åter Huvudmeny                                      *");
+		System.out.println("************************************************************");
+    }
+	
 }

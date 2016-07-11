@@ -34,26 +34,26 @@ package menu;
 					exitApp = true;
 					break;
 				
-				case 1:
+				case 1: //Registrera Passagerare 
 					//ManageEmployee.addEmployee();
-					System.out.println("Du tryckte på 1");
+					System.out.println("Du tryckte på 1 - Registrera Passagerare ");
 					showBookingMenu();
 					break;
 								
-				case 2: 
-					System.out.println("Du tryckte på 2");
+				case 2: // Registrera Bokning
+					System.out.println("Du tryckte på 2 - Registrera Bokning");
 					break;
 					
-				case 3: 
-					System.out.println("Du tryckte på 3");
+				case 3: // Uppdatera Bokning
+					System.out.println("Du tryckte på 3 - Uppdatera Bokning ");
 					break;
 					
-				case 4:
-					System.out.println("Du tryckte på 4");
+				case 4: // Radera Bokning 
+					System.out.println("Du tryckte på 4 - Radera Bokning ");
 					break;
 					
-				case 5: 
-					System.out.println("Du tryckte på 5");
+				case 5: // Ta bort passagerare
+					System.out.println("Du tryckte på 5 - Ta bort passagerare");
 					break;
 					
 				
