@@ -37,8 +37,7 @@ import icarusair.*;
 					exitApp = true;
 					break;
 				
-				case 1: //Registrera Passagerare 
-					//ManageEmployee.addEmployee();
+				case 1: //Registrera Passagerare
 					ManagePassenger.addPassenger();
 					System.out.println();
 					break;

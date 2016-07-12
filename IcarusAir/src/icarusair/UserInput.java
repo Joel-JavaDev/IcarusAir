@@ -64,12 +64,13 @@ import java.util.InputMismatchException;
 					
 					break;
 				} catch (InputMismatchException e){
-					System.out.println(">>> Endast heltal accepteras, försök igen <<<");
+					System.out.println(">>> Endast bokstäver accepteras, försök igen <<<");
 					in.nextLine();
 				}
 			}
 			userInput = userInput.replaceAll("\\s+", "");
-			userInput = userInput.substring(0, 1).toUpperCase() + userInput.substring(1);
+			// omvandlar begynnelsebokstav till majuskel resterande till minuskler
+			userInput = userInput.substring(0, 1).toUpperCase() + userInput.substring(1).toLowerCase();
 			return userInput;
 		}
 		
