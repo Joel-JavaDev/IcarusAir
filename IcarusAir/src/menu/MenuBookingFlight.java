@@ -1,8 +1,10 @@
 package menu;
 
+import icarusair.*;
+
 
 	/**
-	 * Meny för personalhantering, med switschsats. Externa metoder anropas per användarens inmatning
+	 * Meny för bokningshantering, med switschsats. Externa metoder anropas per användarens inmatning
 	 * 
 	 * @author		Joel Delgado, Mats Samuelson
 	 * @version		1.0
@@ -18,14 +20,15 @@ package menu;
 		
 		
 		/**
-		 * Anropar metod för att visa personalhanteringsmeny, anropar därpå extern metod för att 
+		 * Anropar metod för att visa bokningshanteringsmeny, anropar därpå extern metod för att 
 		 * ta emot inmatning från användaren. Endast om användaren matar in värdet 0 som loopen 
 		 * avslutas genom att sätta exitApp = true. Programmet återvänder till startmeny.
 		 */
 		public static void manageBookingMenu() {
-			showBookingMenu();
+
 			exitApp = false;        
 	        do {
+	        	showBookingMenu();
 	            userChoice =  InputMenuChoice.getUserChoise(NUMBER_OF_MENUCHOICES);
 				System.out.println();
 				switch (userChoice){
@@ -36,24 +39,28 @@ package menu;
 				
 				case 1: //Registrera Passagerare 
 					//ManageEmployee.addEmployee();
-					System.out.println("Du tryckte på 1 - Registrera Passagerare ");
-					showBookingMenu();
+					ManagePassenger.addPassenger();
+					System.out.println();
 					break;
 								
 				case 2: // Registrera Bokning
 					System.out.println("Du tryckte på 2 - Registrera Bokning");
+					System.out.println();
 					break;
 					
 				case 3: // Uppdatera Bokning
 					System.out.println("Du tryckte på 3 - Uppdatera Bokning ");
+					System.out.println();
 					break;
 					
 				case 4: // Radera Bokning 
 					System.out.println("Du tryckte på 4 - Radera Bokning ");
+					System.out.println();
 					break;
 					
 				case 5: // Ta bort passagerare
 					System.out.println("Du tryckte på 5 - Ta bort passagerare");
+					System.out.println();
 					break;
 					
 				
@@ -65,8 +72,9 @@ package menu;
 			} while (!exitApp);
 		}
 
+		
 			/**
-			 * Ritar ut Bokningshanteringsmenyn
+			 * Ritar ut menyn för bokningshantering
 			 */
 	        public static void showBookingMenu() {
 		        System.out.println("************************************************************");

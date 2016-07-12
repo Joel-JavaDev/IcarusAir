@@ -9,5 +9,5 @@ package enumerators;
  *
  */
 public enum Title {
-	Mr, Mrs, Ms, Dr, Proffessor
+	Mr, Mrs, Ms, Dr
 }

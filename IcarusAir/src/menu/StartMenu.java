@@ -1,7 +1,7 @@
 package menu;
 
 /**
- * Meny för Bokningsssystem
+ * Textbaserad startmeny för IcarusAir bokningsssystem
  * 
  * @author		Joel Delgado
  * @version		1.0
@@ -18,6 +18,7 @@ public class StartMenu {
 	
 		/**
 		 * Ritar ut startmeny och anropar extern metod för att ta emot inmatning från användaren 
+		 * 
 		 * @return	userChoice	användarens val av menyalternativ
 		 */
 	    public static int mainMenu() {

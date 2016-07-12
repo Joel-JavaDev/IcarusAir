@@ -26,11 +26,10 @@ public class MenuStatistics {
 	 */
 	public static void manageStatisticMenu() {
 		
-		showStatisticMenu();
 		exitApp = false;
 		
-		
 		do {
+			showStatisticMenu();
 			userChoice =  InputMenuChoice.getUserChoise(NUMBER_OF_MENUCHOICES); 
 			System.out.println();
 			switch (userChoice){
@@ -41,22 +40,27 @@ public class MenuStatistics {
 			
 			case 1: // Visa passagerarlista
 				System.out.println("Du tryckte på 1 - Visa passagerarlista");
+				System.out.println();
 			    break;
 							
 			case 2: // Visa upptagna/lediga säten på flygplan
 				System.out.println("Du tryckte på 2 - Visa upptagna/lediga säten på flygplan");
+				System.out.println();
 				break;
 				
 			case 3: // Visa utgifter för flygplan
 				System.out.println("Kostnaden för att flyga detta plan fullbokat är: " + SmallAirPlane.totalOperatingCost());
+				System.out.println();
 				break;
 				
 			case 4: // Visa inkomster för flygplan
 				System.out.println("Du tryckte på 4 - Visa inkomster för flygplan");
+				System.out.println();
 				break;
 				
 			case 5: // Visa omsättning för flygplan 
 				System.out.println("Du tryckte på 5 - Visa omsättning för flygplan");
+				System.out.println();
 				break;
 
 				
@@ -69,8 +73,9 @@ public class MenuStatistics {
     
 	}
 	
+	
 	/**
-	 * Ritar ut Statistikmenyn
+	 * Ritar ut menyn för bokning- och kostnadsstatistik 
 	 */
     public static void showStatisticMenu() {
 		System.out.println("************************************************************");
@@ -84,6 +89,7 @@ public class MenuStatistics {
 		System.out.println("*                                                          *");
 		System.out.println("*   0. Åter Huvudmeny                                      *");
 		System.out.println("************************************************************");
+		System.out.println();
     }
 	
 }

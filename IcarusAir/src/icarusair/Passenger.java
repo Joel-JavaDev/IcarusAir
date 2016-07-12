@@ -8,16 +8,16 @@ public class Passenger {
 	private String firstName;
 	private String lastName;
 	private String nationality;
-	private String idNumb;
-	private int creditCard;
+	private String passportNumber;
+	private long creditCard;
 	
-	public Passenger(Title title, String firstName, String lastName, String nationality, String id, int creditCard) {
-		this.title = title;
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public Passenger(int titleType, String fName, String lName, String ppNumber, String nationality, long ccNumber) {
+		setTitle(titleType);
+		this.firstName = fName;
+		this.lastName = lName;
 		this.nationality = nationality;
-		this.idNumb = id;
-		this.creditCard = creditCard;
+		this.passportNumber = ppNumber;
+		this.creditCard = ccNumber;
 	}
 
 
@@ -33,16 +33,12 @@ public class Passenger {
 		return lastName;
 	}
 	
-	public String getId() {
-		return idNumb;
+	public String getPassport() {
+		return passportNumber;
 	}
 	
-	public int getCreditCard() {
+	public long getCreditCard() {
 		return creditCard;
-	}
-	
-	public void setTitle(Title title) {
-		this.title = title;
 	}
 	
 	public void setFirstName(String firstName) {
@@ -53,8 +49,8 @@ public class Passenger {
 		this.lastName = lastName;
 	}
 	
-	public void setId(String id) {
-		idNumb = id;
+	public void setPassport(String id) {
+		this.passportNumber = id;
 	}
 	
 	public void setCreditCard(int creditCard) {
@@ -69,4 +65,25 @@ public class Passenger {
 		this.nationality = nationality;
 	}
 
+	public void setTitle(int titleType) {
+		switch (titleType) {
+			case 1:
+				title = title.Mr;
+				break;	
+			case 2:
+				title = title.Mrs;
+				break;
+			case 3:
+				title = title.Ms;
+				break;
+			case 4:
+				title = title.Dr;
+				break;
+		}
+	}
+	
+	
+	public String getFullname(){
+		return (getTitle() + ". " + getLastName() + ", " + getFirstName());
+	}
 }

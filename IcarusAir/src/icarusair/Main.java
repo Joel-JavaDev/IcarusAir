@@ -5,7 +5,7 @@ import menu.MenuStatistics;
 import menu.StartMenu;
 
 /**
- * Main-klass, här startar det textbaserade programmet
+ * Main-klass, här både startar och avslutas programmet
  * 
  * @author Joel Delgado, Mats Samuelson
  * @version		1.0
