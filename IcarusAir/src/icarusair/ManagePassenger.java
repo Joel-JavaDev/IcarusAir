@@ -21,7 +21,6 @@ public class ManagePassenger {
 	 * Användaren matar via konsoln in titel, förnamn, efternamn, pass, nationalitet, och kreditkortsnummer.
 	 */
 	public static void addPassenger(){
-		Title title = null;
 		int regTitle;
 		System.out.println("REGISTRERA PASSAGERARE...");
 		boolean exitLoop = false;
@@ -42,6 +41,7 @@ public class ManagePassenger {
 		outputText = "Ange nationalitet: ";
 		String regNationality = UserInput.userInputString(outputText);
 		outputText = "Ange kreditkortsnummer: ";
+		// TODO ändra till String + skapa metod som checkar att det är 16 siffror som anges
 		long regCreditCardNumber = UserInput.userInputLong(outputText);
 		
 		Passenger passenger = new Passenger(regTitle, regFirstName, regLastName, regPassNumber, regNationality, regCreditCardNumber);

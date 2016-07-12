@@ -1,18 +1,13 @@
 package icarusair;
 import java.util.Date;
+import enumerators.*;
+
 
 public class Reservation {
 	
 	private double price;
 	private Date date;
-	public enum Destination {
-	    Stockholm, Gothemburg, Kiruna, Sundsvall,
-	    Malm�; 
-	}
-	public enum Class {
-	    FirstClass, EconomyClass;
-		
-	}
+
 	public String registerPassenger() {
 		return Passenger;
 	}

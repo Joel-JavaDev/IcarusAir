@@ -2,6 +2,15 @@ package icarusair;
 
 import enumerators.Title;
 
+/**
+ * Klass för passagerare med konstruktor samt getter och setter metoder.
+ * 
+ * @author	Joel D
+ * @version	1.1
+ * @since	2016-07-12
+ * 
+ * @Uppd	v1.1	Lagt till variabler för att hålla reda på om flygbokning är gjord [JD] 
+ */
 public class Passenger {
 	
 	private Title title;
@@ -10,6 +19,8 @@ public class Passenger {
 	private String nationality;
 	private String passportNumber;
 	private long creditCard;
+	private boolean hasFlightBookings;
+	private int flightBookingNumber;	// TODO array?
 	
 	public Passenger(int titleType, String fName, String lName, String ppNumber, String nationality, long ccNumber) {
 		setTitle(titleType);
@@ -18,6 +29,8 @@ public class Passenger {
 		this.nationality = nationality;
 		this.passportNumber = ppNumber;
 		this.creditCard = ccNumber;
+		this.hasFlightBookings = false;
+		this.flightBookingNumber = 0;
 	}
 
 
@@ -41,6 +54,14 @@ public class Passenger {
 		return creditCard;
 	}
 	
+	public String getNationality() {
+		return nationality;
+	}
+
+	public boolean getHasFlightBooking() {
+		return hasFlightBookings;
+	}
+	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -57,14 +78,16 @@ public class Passenger {
 		this.creditCard = creditCard;
 	}
 
-	public String getNationality() {
-		return nationality;
-	}
-
 	public void setNationality(String nationality) {
 		this.nationality = nationality;
 	}
+	
+	public void setHasFlightBooking(boolean hasFlightBooking) {
+		this.hasFlightBookings = hasFlightBooking;
+	}
 
+
+	@SuppressWarnings("static-access")
 	public void setTitle(int titleType) {
 		switch (titleType) {
 			case 1:
