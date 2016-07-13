@@ -1,8 +1,8 @@
 package icarusair;
 
-	import java.net.UnknownServiceException;
+import java.net.UnknownServiceException;
 import java.util.InputMismatchException;
-	import java.util.Scanner;
+import java.util.Scanner;
 
 	/**
 	 *  Tar emot användarens menyval via Scanner. 
@@ -10,9 +10,10 @@ import java.util.InputMismatchException;
 	 *  förklarande text som inparameter.
 	 * 
 	 * @author		Joel Delgado
-	 * @version		1.1
-	 * @since		2017-07-12
+	 * @version		1.2
+	 * @since		2017-07-13
 	 * 
+	 * @Uppd	v1.2	Ändrat så den kollar att rätt inmatning av String är gjord (antal bokstäver) [JD]
 	 * @Uppd	v1.1	Lagt till javadoc-kommentarer [JD]
 	 */
 	public class UserInput {
@@ -83,24 +84,30 @@ import java.util.InputMismatchException;
 		 * @return	inputText	den av användaren inmatade texten
 		 */
 		@SuppressWarnings("resource")
-		public static String userInputString(String outputText, int minCharacters){
+		public static String userInputString(String outputText, int minCharacters){ 			// TODO skapa exception?
 			String userInput="";
 			Scanner in = new Scanner(System.in);
-			// TODO kolla så det ej är tom sträng (null) och innehåller minst 2 bokstäver
-			// TODO skapa exception?
 			while (true){
 				try {
 					System.out.print(outputText);
-					userInput = in.nextLine();
-					
-					break;
+				    while (!in.hasNext("[A-Öa-ö]+")) {
+				        System.out.println(">>> Endast bokstäver accepteras, försök igen <<<");
+				        in.next();
+				    }
+				    userInput = in.next();
+					in.nextLine();
 				} catch (InputMismatchException e){
 					System.out.println(">>> Endast bokstäver accepteras, försök igen <<<");
 					in.nextLine();
 				}
+				userInput = userInput.replaceAll("\\s+", "");
+				// omvandlar begynnelsebokstav till majuskel resterande till minuskler
+				if (userInput.length() < minCharacters){
+					System.out.println(">>> Fel inmatning! Du måste ange minst " + minCharacters +" bokstäver. Försök igen.... <<<");
+				} else {
+					break;
+				}
 			}
-			userInput = userInput.replaceAll("\\s+", "");
-			// omvandlar begynnelsebokstav till majuskel resterande till minuskler
 			userInput = userInput.substring(0, 1).toUpperCase() + userInput.substring(1).toLowerCase();
 			return userInput;
 		}

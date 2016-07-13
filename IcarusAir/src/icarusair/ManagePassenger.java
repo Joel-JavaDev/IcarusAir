@@ -38,13 +38,13 @@ public class ManagePassenger {
 				System.out.println(">>> Fel inmatning! Endast titel nr 1-5 är godkänt. Försök igen.... <<< \n");
 		} while (!exitLoop);
 		outputText = "Ange förnamn: ";
-		String regFirstName = UserInput.userInputString(outputText);
+		String regFirstName = UserInput.userInputString(outputText, MIN_NAME_LETTERS);
 		outputText = "Ange efternamn: ";
-		String regLastName = UserInput.userInputString(outputText);
+		String regLastName = UserInput.userInputString(outputText, MIN_NAME_LETTERS);
 		outputText = "Ange passnummer: ";
 		String regPassNumber = UserInput.userInputString(outputText);
 		outputText = "Ange nationalitet: ";
-		String regNationality = UserInput.userInputString(outputText);
+		String regNationality = UserInput.userInputString(outputText, MIN_NATIONALITY_LETTERS);
 		outputText = "Ange kreditkortsnummer: ";
 		// TODO ändra till String + skapa metod som checkar att det är 16 siffror som anges
 		long regCreditCardNumber = UserInput.userInputLong(outputText);
