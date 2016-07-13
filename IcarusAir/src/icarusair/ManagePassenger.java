@@ -17,12 +17,16 @@ public class ManagePassenger {
 	public static PassengerCatalog passCat = new PassengerCatalog();
 	//passCat = new Passenger
 
+	
 	/**
 	 * Metod för att lägga till passagerare 
 	 * Användaren matar via konsoln in titel, förnamn, efternamn, pass, nationalitet, och kreditkortsnummer.
 	 */
 	public static void addPassenger(){
 		int regTitle;
+		final int MIN_NAME_LETTERS = 2;
+		final int MIN_NATIONALITY_LETTERS = 3;
+		
 		System.out.println("REGISTRERA PASSAGERARE...");
 		boolean exitLoop = false;
 		do {

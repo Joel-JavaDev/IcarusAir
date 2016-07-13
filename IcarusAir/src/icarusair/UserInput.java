@@ -76,6 +76,36 @@ import java.util.InputMismatchException;
 		
 		
 		/**
+		 * Tar emot användarens inmatning av teckensträng via Scannermetod, och skriver ut innan vad för typ av
+		 * inmatning som önskas. Kollar så inmatning ej är en tom sträng och minst två bokstäver långt.
+		 *  
+		 * @param	outputText	vad för typ av inmatning som önskas 
+		 * @return	inputText	den av användaren inmatade texten
+		 */
+		@SuppressWarnings("resource")
+		public static String userInputString(String outputText, int minCharacters){
+			String userInput="";
+			Scanner in = new Scanner(System.in);
+			// TODO kolla så det ej är tom sträng (null) och innehåller minst 2 bokstäver
+			// TODO skapa exception?
+			while (true){
+				try {
+					System.out.print(outputText);
+					userInput = in.nextLine();
+					
+					break;
+				} catch (InputMismatchException e){
+					System.out.println(">>> Endast bokstäver accepteras, försök igen <<<");
+					in.nextLine();
+				}
+			}
+			userInput = userInput.replaceAll("\\s+", "");
+			// omvandlar begynnelsebokstav till majuskel resterande till minuskler
+			userInput = userInput.substring(0, 1).toUpperCase() + userInput.substring(1).toLowerCase();
+			return userInput;
+		}
+		
+		/**
 		 * Tar emot användarens inmatning av long-tal via Scannermetod, och skriver ut innan vad för typ av
 		 * inmatning som önskas. Kollar så inmatning består av 16st siffror
 		 *  

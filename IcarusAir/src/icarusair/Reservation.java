@@ -4,9 +4,11 @@ import enumerators.*;
 
 /**
  * 
- * @author	Mats Samuelson
- * @version	1.0
- * @since	2016-07-11
+ * @author	Mats Samuelson, Joel Delgado
+ * @version	1.1
+ * @since	2016-07-13
+ * 
+ * @Uppd	v1.1	deklarerat metodvariabler
  *
  */
 public class Reservation {
@@ -18,44 +20,42 @@ public class Reservation {
 
 	
 	public boolean isAvailable() {
-		// TODO Mats: deklarera och initiera returvariabel
+		boolean isAvailable = false;
 		// TODO Mats: Utveckla metoden
 		return isAvailable;
 	}
 	
 	public String assignSeat() {
-		// TODO Mats: deklarera och initiera returvariabel
+		String seat = null;
 		// TODO Mats: Utveckla metoden
-		return Seat;
+		return seat;
 	}
 	
 	public String addLuggage() {
-		// TODO Mats: deklarera och initiera returvariabel
+		String luggage = null;
 		// TODO Mats: Utveckla metoden
-		return Luggage;
+		return luggage;
 	}
 	
 	public String addMeal() {
-		// TODO Mats: deklarera och initiera returvariabel
+		String meal = null;
 		// TODO Mats: Utveckla metoden
-		return Meal;
+		return meal;
 	}
 	
 	public String createTicket() {
-		// TODO Mats: deklarera och initiera returvariabel
+		String ticketCreated = null;
 		// TODO Mats: Utveckla metoden
-		return Ticket;
+		return ticketCreated;
 	}
 	
 	public String printTicket() {
-		// TODO Mats: deklarera och initiera returvariabel
+		String ticketPrinted = null;
 		// TODO Mats: Utveckla metoden
-		return Ticket;
+		return ticketPrinted;
 	}
 	
-	public String updateCounter() {
-		// TODO Mats: deklarera och initiera returvariabel
+	public void updateCounter() {
 		// TODO Mats: Utveckla metoden och gör koppling till klassen ReservationCounter
-		return Counter;
 	}
 }
